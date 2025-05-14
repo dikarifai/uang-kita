@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f1f5f9;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  --primary: #0d9488;
+  --secondary: #22c55e;
+  --card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #f59e0b;
+  --error: #dc2626;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+
+  /* Hover */
+  --primary-hover: #0f766e;
+  --secondary-hover: #15803d;
+  --card-hover: #f9fafb;
+  --text-primary-hover: #1e293b;
+  --text-secondary-hover: #334155;
+  --accent-hover: #d97706;
+  --error-hover: #b91c1c;
+  --success-hover: #15803d;
+  --warning-hover: #d97706;
+  --info-hover: #0284c7;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.button:hover {
+  filter: brightness(80%);
+}
+.button:focus {
+  filter: brightness(120%);
+}
+
+.button-outline:hover {
+  filter: brightness(80%) !important;
+}
