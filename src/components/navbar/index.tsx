@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
@@ -54,7 +55,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       id="navbar"
-      className="flex flex-row w-full justify-around sticky mt-4 bottom-0 shadow bg-white"
+      className="flex flex-row w-full justify-around fixed mt-4 bottom-0 shadow bg-white"
     >
       {navigations.map((navigation, index) => {
         if (navigation.key === "add-transaction") {
@@ -66,14 +67,20 @@ const Navbar: React.FC = () => {
                     {navigation.icon}
                   </button> */}
                   <div className="flex-row flex justify-between gap-8">
-                    <button className="flex-col bg-success text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                    <Link
+                      href={"/transactions/income"}
+                      className="flex-col bg-success text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg"
+                    >
                       <FaArrowDown size={20} />
                       <FaMoneyBill size={20} />
-                    </button>
-                    <button className="flex-col bg-error text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                    </Link>
+                    <Link
+                      href={"/transactions/expense"}
+                      className="flex-col bg-error text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg"
+                    >
                       <FaArrowUp size={20} />
                       <FaMoneyBill size={20} />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}

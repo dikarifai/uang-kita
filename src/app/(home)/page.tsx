@@ -9,7 +9,7 @@ import { FaArrowDown, FaArrowUp, FaMoneyBill } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <section className="bg-gradient-to-b from-primary text-white to-white">
         <div className="flex h-10 px-4 my-3 shadow"></div>
         <div
@@ -54,6 +54,6 @@ export default function Home() {
           <ListItemTransactions items={transactions} />
         </ListLayout>
       </Section>
-    </main>
+    </>
   );
 }
